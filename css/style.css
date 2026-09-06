@@ -638,8 +638,9 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 
 /* ── Speakers ── */
 .speaker-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   margin-bottom: 2rem;
 }
@@ -649,16 +650,16 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   box-shadow: var(--shadow-md);
   overflow: hidden;
   border-top: 4px solid var(--amity-teal);
+  width: 100%;
+  max-width: 260px;
   transition: box-shadow var(--transition-slow), transform var(--transition-slow);
 }
 .speaker-card:hover { box-shadow: var(--shadow-xl); transform: translateY(-4px); }
 
 .speaker-photo {
-  height: 200px;
-  background: var(--amity-teal);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 240px;
+  background: var(--amity-navy);
+  overflow: hidden;
 }
 .speaker-photo-placeholder {
   width: 90px; height: 90px;
